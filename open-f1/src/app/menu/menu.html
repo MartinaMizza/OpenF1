@@ -1,8 +1,13 @@
 
 <nav>
+    <div class="logo">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <img src="logof1.png" alt="Formula 1 Logo" width="120" height="40">
+        </a>
+    </div>
     <div class="nav-links">
-    <a routerLink="/">Home</a>
-    <a routerLink="/gran-premi">Gran Premi</a>
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+    <a routerLink="/gran-premi" routerLinkActive="active">Gran Premi</a>
     </div>
     <div class="nav-actions">
         <app-theme-toggle></app-theme-toggle>

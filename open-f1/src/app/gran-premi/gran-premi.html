@@ -1,1 +1,28 @@
-<p>gran-premi works!</p>
+<div class="gp-header" >
+<h1>Gran Premi di Formula 1</h1>
+<div class="selectedYear-container">
+    <a>Anno</a>
+<p-select 
+    [options]="years" 
+    [(ngModel)]="selectedYear" 
+    optionLabel="name" 
+    placeholder="Anno" 
+    class="year-select" (ngModelChange)="loadMeetings()"/>
+</div>
+</div>
+<div class="gran-premi-container">
+@for (meeting of meetings; track $index) {
+    <div class="gp-card">
+        <h2>{{meeting.meeting_official_name}}</h2>
+        <h3 class="country-flag">
+            <img class="flag-icon" 
+                 [src]="'https://flagcdn.com/w40/' + getFlagCode(meeting.country_code) + '.png'" 
+                 [alt]="meeting.country_name + ' flag'">
+            <span>{{ meeting.country_name }}</span>
+        </h3>
+        <h4>📍 {{meeting.location}}</h4>
+        <p>🗓️ {{meeting.date_start | date:'longDate'}} </p>
+    </div>
+   
+}
+</div>

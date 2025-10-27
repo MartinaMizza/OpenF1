@@ -1,0 +1,170 @@
+.gp-card {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: #1f1f1f; /* Sfondo scuro (carbone) */
+  border-radius: 6px;
+  margin-bottom: 10px;
+  border-left: 4px solid #e10600; /* Bordo laterale rosso (stile F1) */
+  transition: background-color 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.gp-card:hover {
+  background-color: #2a2a2a; /* Sfondo leggermente più chiaro al passaggio */
+}
+
+/* Stile per il nome ufficiale (h3) */
+.gp-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;   /* Grassetto */
+  color: #ffffff;     /* Testo bianco */
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Stile per il nome del paese (h4) */
+.gp-card h4 {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #cccccc; /* Grigio chiaro */
+  margin: 0;
+  text-transform: uppercase; /* Tutto maiuscolo per un look "tecnico" */
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+/* 1. Contenitore (Nessuna modifica qui) */
+.selectedYear-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Spazio tra etichetta e menu */
+  margin: 20px 20px 20px 20px; 
+}
+
+/* 2. Stile del box principale (CHIUSO)
+   MODIFICATO: Usiamo .selectedYear-container per lo scope
+*/
+:host ::ng-deep .selectedYear-container .p-select {
+  background-color: #E10600; /* Sfondo scuro */
+  border: 2px solid #E10600; /* Bordo rosso F1 */
+  border-radius: 6px;
+  color: #ffffff;
+}
+
+/* Testo dell'anno selezionato (es. "2024") */
+:host ::ng-deep .selectedYear-container .p-select-label {
+  color: #ffffff; /* Testo bianco */
+  font-weight: 600;
+  padding: 8px 12px;
+}
+
+/* Freccetta del dropdown */
+:host ::ng-deep .selectedYear-container .p-select-trigger .p-icon {
+  color: #ffffff; /* Freccetta bianca */
+}
+
+/* Effetto Hover sul box (chiuso) */
+:host ::ng-deep .selectedYear-container .p-select:not(.p-select-disabled):hover {
+  border-color: #FF1F16; /* Bordo rosso più chiaro al passaggio */
+  background-color: #FF1F16; /* Sfondo rosso F1 */
+  color: #ffffff;
+}
+
+
+/* 3. Stile della LISTA (APERTA)
+   MODIFICATO: Usiamo .selectedYear-container per lo scope
+*/
+
+/* Stile del pannello che contiene la lista */
+:host ::ng-deep .selectedYear-container .p-select-panel {
+  background-color: #2a2a2a;
+  border: 1px solid #777;
+  border-radius: 6px;
+}
+
+/* Singola opzione nella lista */
+:host ::ng-deep .selectedYear-container .p-select-item {
+  color: #dddddd;
+  border-radius: 4px;
+  margin: 2px 4px;
+}
+
+/* Opzione in HOVER (quando passi il mouse) */
+:host ::ng-deep .selectedYear-container .p-select-item:not(.p-highlight):not(.p-disabled):hover {
+  background-color: #444; 
+  color: #ffffff;
+}
+
+/* Opzione SELEZIONATA (attiva) nella lista */
+:host ::ng-deep .selectedYear-container .p-select-item.p-highlight {
+  background-color: #E10600; /* Il tuo colore rosso F1 */
+  color: #ffffff; /* Testo bianco */
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.gran-premi-container {
+  max-width: none;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 {
+  padding: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+  color: #E10600;
+  font-size: bold;
+}
+ 
+h2 {
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #cccccc;
+}
+
+a {
+  font-weight: 600;
+  color: #E10600;
+  margin-right: 10px;
+}
+
+/* Stile per il contenitore della bandiera e del nome */
+.country-flag {
+  display: flex;
+  align-items: center; /* Allinea verticalmente la bandiera e il testo */
+  gap: 10px; /* Spazio tra la bandiera e il nome */
+  margin: 0;
+  
+  /* Se 'h3' aveva stili di default, 
+     potresti doverli ri-applicare qui (es. colore, font-size) */
+}
+
+/* Stile per l'icona della bandiera */
+.flag-icon {
+  width: 52px;  /* Deve corrispondere alla dimensione scelta nell'URL */
+  height: auto; /* Mantiene le proporzioni */
+  
+  /* Opzionale: aggiunge un piccolo bordo o arrotondamento */
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); 
+}
+
+.gp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+
+}

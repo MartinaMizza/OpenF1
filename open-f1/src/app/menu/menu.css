@@ -24,8 +24,18 @@ nav {
   background-color: var(--p-highlight-background);
   color: var(--p-highlight-text-color);
 }
+
+.nav-links a.active {
+  background-color: var(--p-primary-color);
+  color: var(--p-primary-contrast-color);
+  background-color: #E10600;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
  
 .nav-actions {
   display: flex;
   align-items: center;
 }
+
