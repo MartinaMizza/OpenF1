@@ -168,3 +168,13 @@ a {
   padding: 0 20px;
 
 }
+
+a.link-button {
+  text-decoration: none;
+  background-color: #E10600;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}

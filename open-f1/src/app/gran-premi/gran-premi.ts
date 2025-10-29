@@ -5,10 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { Meeting } from '../models/meeting';
 import { DatePipe } from '@angular/common';
 import { Year } from '../models/year';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-gran-premi',
-  imports: [SelectModule, FormsModule, DatePipe],
+  imports: [SelectModule, FormsModule, DatePipe, RouterLink],
   templateUrl: './gran-premi.html',
   styleUrl: './gran-premi.css'
 })

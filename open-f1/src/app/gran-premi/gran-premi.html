@@ -22,6 +22,7 @@
         </h3>
         <h4>📍 {{meeting.location}}</h4>
         <p>🗓️ {{meeting.date_start | date:'longDate'}} </p>
+        <a routerLink="/gran-premi/{{meeting.meeting_key}}">Dettagli</a>
     </div>
    
 }
