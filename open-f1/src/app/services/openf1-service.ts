@@ -3,6 +3,7 @@ import { inject, Injectable } from '@angular/core';
 import { Meeting } from '../models/meeting';
 import { firstValueFrom } from 'rxjs';
 import { Session } from '../models/session';
+import { SessionResult } from '../models/session-result';
 
 @Injectable({
   providedIn: 'root'
@@ -28,7 +29,13 @@ export class Openf1Service {
       return firstValueFrom(response);
   }
 
+  async getSessionsResults(sessionKey: number): Promise<SessionResult[]> {
+    const response = this.http.get<SessionResult[]>(`${this.baseUrl}/session_result?session_key=${sessionKey}`); 
+      return firstValueFrom(response);
+  }
+
   getFlag(countryCode: string): string {
     return `${this.flagUrl}${countryCode}.png`;
   }
 }
+

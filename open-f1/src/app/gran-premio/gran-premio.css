@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Card principale del Gran Premio (quella che contiene tutto) */
+.gp-card {
+  background-color: #1f1f1f; /* Sfondo card scuro */
+  border-radius: 8px;
+  max-width: 900px;
+  margin: 20px auto; /* Centra la card */
+  padding: 24px;
+  border-left: 5px solid #e10600; /* Accento rosso F1 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* * Stili per i dettagli del Meeting (in cima) 
+ */
+
+/* Titolo principale (es. "FORMULA 1 ...") */
+.gp-card h2 {
+  font-family: 'Staatliches', sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+}
+
+/* Contenitore per bandiera e nome paese */
+.country-flag {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 8px 0;
+}
+
+.country-flag span {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f0f0f0;
+}
+
+.flag-icon {
+  width: 40px; /* Corrisponde a 'w40' nell'URL */
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Location e Data */
+.gp-card h4,
+.gp-card p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  color: #cccccc;
+  margin: 8px 0;
+}
+
+/* * Stili per la sezione Sessioni 
+ */
+
+.sessions-container {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #444; /* Linea di separazione */
+}
+
+/* Titolo "Sessioni:" */
+.sessions-container h3 {
+  font-family: 'Staatliches', sans-serif;
+  font-size: 2rem;
+  color: #e10600; /* Accento rosso */
+  margin: 0 0 16px 0;
+  letter-spacing: 1px;
+}
+
+/* La griglia che contiene le card delle sessioni */
+.sessions-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Default: 1 colonna (mobile) */
+  gap: 16px;
+}
+
+/* La singola card di una sessione (es. "Practice 1") */
+.session-card {
+  background-color: #2a2a2a; /* Sfondo più chiaro */
+  padding: 16px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  transition: border-color 0.3s ease;
+}
+
+.session-card:hover {
+  border-color: #e10600; /* Accento rosso al passaggio */
+}
+
+/* Testo dentro la card della sessione */
+.session-card h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+}
+
+.session-card h4 {
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 400;
+  color: #cccccc;
+  margin: 0 0 8px 0;
+}
+
+.session-card p {
+  font-size: 1rem;
+  color: #f0f0f0;
+  margin: 0;
+}
+
+/* * Media Query per Desktop 
+ * (Quando lo schermo è più largo di 768px, usa 3 colonne) 
+ */
+@media (min-width: 768px) {
+  .sessions-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
