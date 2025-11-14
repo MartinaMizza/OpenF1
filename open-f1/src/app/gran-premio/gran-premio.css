@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 /* Card principale del Gran Premio (quella che contiene tutto) */
 .gp-card {
@@ -17,7 +17,7 @@
 
 /* Titolo principale (es. "FORMULA 1 ...") */
 .gp-card h2 {
-  font-family: 'Staatliches', sans-serif;
+  font-family: sans-serif;
   font-size: 2.5rem;
   letter-spacing: 1.5px;
   color: #ffffff;
@@ -65,7 +65,7 @@
 
 /* Titolo "Sessioni:" */
 .sessions-container h3 {
-  font-family: 'Staatliches', sans-serif;
+  font-family: sans-serif;
   font-size: 2rem;
   color: #e10600; /* Accento rosso */
   margin: 0 0 16px 0;
